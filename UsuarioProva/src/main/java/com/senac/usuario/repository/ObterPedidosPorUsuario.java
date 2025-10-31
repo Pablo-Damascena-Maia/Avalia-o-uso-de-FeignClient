@@ -12,10 +12,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
-@FeignClient(name = "ObterPedidos", url = "10.136.36.223:8080", path = "/api/pedido")
+@FeignClient(name = "ObterPedidos", url = "10.136.36.210:8080", path = "/api/pedido")
 public interface ObterPedidosPorUsuario {
 
-    @GetMapping(value = "/listarTodos")
+    @GetMapping(value = "/buscar/usuario/{id}")
     public List<PedidoDto> obterPorId(@PathVariable Integer id);
 
 }
